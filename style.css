@@ -1,0 +1,678 @@
+
+/* =========================================
+   ANNIVERSARY WEBSITE - STYLE.CSS
+   Made with love ??
+========================================= */
+
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #2b0718, #5c102e, #300819);
+    color: #fff0f5;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+/* COLORS:
+   Dark background: #2b0718
+   Rose pink:       #ff6b9a
+   Light pink:      #ffd6e5
+   White pink:      #fff0f5
+*/
+
+
+/* =========================================
+   FLOATING HEART BACKGROUND
+========================================= */
+
+.hearts-background {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: -50px;
+    color: #ff6b9a;
+    font-size: 20px;
+    opacity: 0;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    90% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   PAGE SECTIONS
+========================================= */
+
+.page {
+    display: none;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+    padding: 70px 20px;
+    animation: fadeIn 0.7s ease;
+}
+
+.page.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADINGS AND TEXT
+========================================= */
+
+h1 {
+    color: #ffd6e5;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 15px 0 20px;
+    text-shadow: 0 0 20px rgba(255, 107, 154, 0.3);
+}
+
+h2 {
+    color: #ff8eb3;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #ffd6e5;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.small-text {
+    color: #ff8eb3;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.subtitle,
+.section-description {
+    color: #f6c4d5;
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.section-description {
+    margin-bottom: 40px;
+}
+
+
+/* =========================================
+   WELCOME PAGE
+========================================= */
+
+.welcome-card {
+    width: 100%;
+    max-width: 700px;
+    padding: 50px 30px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 142, 179, 0.35);
+    border-radius: 30px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.big-heart {
+    font-size: 100px;
+    margin: 20px 0;
+    animation: heartbeat 1.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(255, 107, 154, 0.5));
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.12);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.08);
+    }
+}
+
+.welcome-message {
+    color: #ffd6e5;
+    margin: 20px auto 30px;
+    max-width: 450px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.main-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b9a, #ff3f78);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 28px;
+    margin: 15px 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(255, 63, 120, 0.25);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+}
+
+.main-button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 35px rgba(255, 63, 120, 0.45);
+}
+
+.main-button:active {
+    transform: scale(0.97);
+}
+
+button:focus-visible {
+    outline: 2px solid #ffd6e5;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   FIVE LOVE LETTER CARDS
+========================================= */
+
+.letters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin: 35px auto 30px;
+}
+
+.letter-card {
+    background: linear-gradient(
+        145deg,
+        rgba(255, 107, 154, 0.15),
+        rgba(255, 255, 255, 0.04)
+    );
+    border: 1px solid rgba(255, 142, 179, 0.3);
+    border-radius: 22px;
+    padding: 30px 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease,
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.letter-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 107, 154, 0.18);
+    box-shadow: 0 12px 30px rgba(255, 63, 120, 0.15);
+}
+
+.envelope {
+    font-size: 55px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.letter-card:hover .envelope {
+    transform: rotate(-8deg) scale(1.12);
+}
+
+.letter-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+}
+
+.letter-card p {
+    color: #f6c4d5;
+    margin-bottom: 12px;
+}
+
+.letter-card span {
+    color: #ff8eb3;
+    font-size: 0.85rem;
+}
+
+
+/* =========================================
+   POPUP WINDOWS
+========================================= */
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: rgba(15, 0, 8, 0.82);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.popup.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+    position: relative;
+    background: linear-gradient(145deg, #57132f, #351020);
+    border: 1px solid rgba(255, 142, 179, 0.4);
+    border-radius: 25px;
+    padding: 45px 30px 35px;
+    width: 100%;
+    max-width: 550px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: popupAppear 0.35s ease;
+}
+
+@keyframes popupAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.popup-heart {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+#letterContent,
+#reasonContent {
+    color: #ffe2ec;
+    font-size: 1.05rem;
+    line-height: 2;
+    white-space: pre-line;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.signature {
+    color: #ff8eb3;
+    font-style: italic;
+    text-align: right;
+    margin-top: 25px;
+}
+
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    color: #ffd6e5;
+    font-size: 35px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.close-button:hover {
+    transform: rotate(90deg);
+    color: #ff6b9a;
+}
+
+
+/* =========================================
+   50 REASONS GRID
+========================================= */
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 15px;
+    margin: 35px auto 30px;
+}
+
+.reason-card {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 8px;
+    background: rgba(255, 107, 154, 0.1);
+    border: 1px solid rgba(255, 142, 179, 0.25);
+    border-radius: 18px;
+    cursor: pointer;
+    transition: transform 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    background: rgba(255, 107, 154, 0.25);
+    border-color: #ff8eb3;
+}
+
+.reason-number {
+    color: #ffd6e5;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.reason-icon {
+    font-size: 25px;
+}
+
+
+/* =========================================
+   PHOTO GALLERY
+========================================= */
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin: 35px auto;
+}
+
+.photo-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 142, 179, 0.25);
+    border-radius: 20px;
+    padding: 12px 12px 18px;
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-7px) rotate(-1deg);
+    box-shadow: 0 15px 35px rgba(255, 63, 120, 0.2);
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #6a2343, #351020);
+    color: #ffd6e5;
+}
+
+.photo-card p {
+    color: #ffd6e5;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.photo-note {
+    color: #dca9bc;
+    font-size: 0.9rem;
+    margin: 20px auto;
+}
+
+
+/* =========================================
+   FINAL LOVE LETTER PAGE
+   Used by gift.html
+========================================= */
+
+.final-letter {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 50px 35px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 142, 179, 0.35);
+    border-radius: 30px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.final-letter h1 {
+    margin-bottom: 25px;
+}
+
+.final-letter p {
+    color: #ffe2ec;
+    font-size: 1.05rem;
+    line-height: 2;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.final-letter .final-signature {
+    text-align: right;
+    color: #ff8eb3;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+.secret-message {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    background: rgba(255, 107, 154, 0.12);
+    border: 1px dashed #ff8eb3;
+    border-radius: 20px;
+    animation: fadeIn 0.6s ease;
+}
+
+.secret-message.show {
+    display: block;
+}
+
+.secret-message p {
+    text-align: center;
+}
+
+
+/* =========================================
+   HEART EXPLOSION EFFECT
+========================================= */
+
+.explosion-heart {
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    font-size: 25px;
+    animation: heartExplosion 1.5s ease-out forwards;
+}
+
+@keyframes heartExplosion {
+    0% {
+        transform: translate(0, 0) scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--move-x), var(--move-y))
+                   rotate(360deg) scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN - TABLETS
+========================================= */
+
+@media (max-width: 900px) {
+    .letters-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .reasons-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN - PHONES
+========================================= */
+
+@media (max-width: 550px) {
+    .page {
+        padding: 45px 15px;
+    }
+
+    .welcome-card {
+        padding: 35px 20px;
+    }
+
+    .big-heart {
+        font-size: 75px;
+    }
+
+    .small-text {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .letters-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .letter-card {
+        padding: 22px 15px;
+    }
+
+    .envelope {
+        font-size: 45px;
+    }
+
+    .reasons-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .reason-card {
+        min-height: 85px;
+        padding: 10px 5px;
+    }
+
+    .reason-number {
+        font-size: 1.1rem;
+    }
+
+    .reason-icon {
+        font-size: 22px;
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .photo-card img {
+        height: 260px;
+    }
+
+    .popup-content {
+        padding: 40px 22px 25px;
+    }
+
+    .main-button {
+        padding: 13px 22px;
+        font-size: 0.95rem;
+    }
+
+    .final-letter {
+        padding: 35px 22px;
+    }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Forever Love ❤️</title>
+
+    <!-- Connect the romantic design -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connect the JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Floating hearts background -->
+    <div class="hearts-background" id="heartsBackground"></div>
+
+    <!-- FINAL LOVE LETTER -->
+    <section class="page active">
+
+        <div class="final-letter">
+
+            <p class="small-text">MY FINAL SURPRISE FOR YOU</p>
+
+            <div class="big-heart">💖</div>
+
+            <h1>To My Forever Love</h1>
+
+            <p>
+                My dearest love,
+            </p>
+
+            <p>
+                If you've made it this far, then you've opened my five
+                letters, discovered 50 reasons why I love you, and
+                looked through some of our beautiful memories.
+            </p>
+
+            <p>
+                But even after all those letters, all those reasons,
+                and all those memories, there is still so much more
+                I want to tell you.
+            </p>
+
+            <p>
+                You are someone incredibly special to me. You have
+                brought happiness into my life in ways that are
+                difficult to explain. Sometimes, even the smallest
+                things you do can make my entire day better.
+            </p>
+
+            <p>
+                I love our conversations, our laughter, our silly
+                moments, and even the little things that might seem
+                ordinary to other people. To me, they become special
+                simply because they involve you.
+            </p>
+
+            <p>
+                I know neither of us is perfect. We will have days
+                when things are difficult, when we misunderstand
+                each other, or when life becomes stressful.
+                But I hope we continue to listen, understand,
+                forgive, and grow together.
+            </p>
+
+            <p>
+                I want to support your dreams, celebrate your
+                achievements, comfort you when you're tired, and
+                remind you of your worth whenever you forget it.
+            </p>
+
+            <p>
+                I cannot predict every chapter of our future,
+                but I hope I get to share many of those chapters
+                with you.
+            </p>
+
+            <p>
+                Thank you for being part of my life.
+                Thank you for the memories we have already made
+                and for all the beautiful memories we have yet
+                to create.
+            </p>
+
+            <p>
+                If I could start this story all over again,
+                I would still want the chance to meet you,
+                know you, and fall in love with you.
+            </p>
+
+            <p>
+                No website could ever fully explain how much
+                you mean to me. I just hope this little surprise
+                reminds you that you are loved, appreciated,
+                and cherished.
+            </p>
+
+            <p>
+                You are my favorite person, my babii,
+                and someone I am grateful to have in my life.
+            </p>
+
+            <p class="final-signature">
+                With all my love, today and always. ❤️
+            </p>
+
+            <hr style="
+                border: none;
+                border-top: 1px solid #ff8eb3;
+                margin: 30px 0;
+            ">
+
+            <!-- HIDDEN SECRET MESSAGE -->
+            <div class="secret-area">
+
+                <h2>Wait... One Last Little Secret 💌</h2>
+
+                <p style="text-align: center;">
+                    There's something else I want you to know.
+                </p>
+
+                <button
+                    class="main-button"
+                    type="button"
+                    onclick="revealSecret()">
+
+                    Open My Secret Message 💗
+
+                </button>
+
+                <div id="secretMessage" class="secret-message">
+
+                    <div class="popup-heart">💝</div>
+
+                    <h2>My Little Secret ❤️</h2>
+
+                    <p>
+                        Out of all the people I could have met,
+                        I am so happy that our paths crossed.
+                    </p>
+
+                    <p>
+                        Out of all the memories I could make,
+                        I want to keep creating more with you.
+                    </p>
+
+                    <p>
+                        And out of all the words I could say,
+                        there is one I hope you never get tired
+                        of hearing:
+                    </p>
+
+                    <h2 style="text-align: center;">
+                        I LOVE YOU, MY BABY! ❤️
+                    </h2>
+
+                    <p style="text-align: center;">
+                        You are precious to me, and I hope I
+                        can keep giving you reasons to smile.
+                    </p>
+
+                    <p style="text-align: center;">
+                        Forever your love. 💋
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- RETURN BUTTON -->
+            <button
+                class="main-button"
+                type="button"
+                onclick="returnToPhotos()">
+
+                Back to Our Memories 📸
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE FUNCTIONS -->
+    <script>
+        function revealSecret() {
+            const secret = document.getElementById("secretMessage");
+
+            secret.classList.add("show");
+
+            heartExplosion();
+
+            secret.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }
+
+        function returnToPhotos() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>

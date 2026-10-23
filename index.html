@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love ❤️</title>
+
+    <!-- Connect the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Hearts Background -->
+    <div class="hearts-background" id="heartsBackground"></div>
+
+
+
+
+	<!-- HOME SECTION -->
+	<section id="home" class="page active">
+	    <div class="welcome-card">
+
+	        <p class="small-text">A LITTLE SOMETHING FOR YOU</p>
+
+	        <h1>HAPPY ANNIVERSARY BABII❤️</h1>
+
+	        <p class="subtitle">
+	            Meeting you was one of the best things that happened in my life!!
+	        </p>
+
+	        <div class="big-heart">💗</div>
+
+	        <p class="welcome-message">
+	            Sorry medyo delay yung nagawa ko hehe
+	        </p>
+
+	        <button onclick="openGift()" class="main-button">
+	            Open Your Surprise 💌
+	        </button>
+
+	    </div>
+	</section>
+
+
+
+
+    <!-- FIVE LOVE LETTERS SECTION -->
+    <section id="letters" class="page">
+        <div class="section-container">
+
+            <p class="small-text">WORDS FROM MY HEART</p>
+
+            <h1>Five Letters for You 💌</h1>
+
+            <p class="section-description">
+                Each letter holds a little piece of my heart.
+                Tap each envelope to open it.
+            </p>
+
+            <div class="letters-grid">
+
+                <div class="letter-card" onclick="openLetter(0)">
+                    <div class="envelope">💌</div>
+                    <h3>Letter One</h3>
+                    <p>THE FIRST TIME WE MET</p>
+                    <span>Tap to open ❤️</span>
+                </div>
+
+                <div class="letter-card" onclick="openLetter(1)">
+                    <div class="envelope">💌</div>
+                    <h3>Letter Two</h3>
+                    <p>FIRST FEW MONTHS</p>
+                    <span>Tap to open ❤️</span>
+                </div>
+
+                <div class="letter-card" onclick="openLetter(2)">
+                    <div class="envelope">💌</div>
+                    <h3>Letter Three</h3>
+                    <p>THE THINGS I LIKE ABOUT YOU</p>
+                    <span>Tap to open ❤️</span>
+                </div>
+
+                <div class="letter-card" onclick="openLetter(3)">
+                    <div class="envelope">💌</div>
+                    <h3>Letter Four</h3>
+                    <p>WISH KO SAYO</p>
+                    <span>Tap to open ❤️</span>
+                </div>
+
+                <div class="letter-card" onclick="openLetter(4)">
+                    <div class="envelope">💌</div>
+                    <h3>Letter Five</h3>
+                    <p>THINGS I WANT TO DO WITH YOU</p>
+                    <span>Tap to open ❤️</span>
+                </div>
+
+            </div>
+
+            <button class="main-button" onclick="showPage('reasons')">
+                Continue to 50 Reasons 💕
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- LETTER POPUP -->
+    <div id="letterPopup" class="popup">
+        <div class="popup-content">
+
+            <button class="close-button" onclick="closeLetter()">
+                &times;
+            </button>
+
+            <div class="popup-heart">💌</div>
+
+            <h2 id="letterTitle">A Letter for You</h2>
+
+            <p id="letterContent"></p>
+
+            <p class="signature">
+                Forever yours, ❤️
+            </p>
+
+            <button class="main-button" onclick="closeLetter()">
+                Close Letter 💗
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- 50 REASONS SECTION -->
+    <section id="reasons" class="page">
+        <div class="section-container">
+
+            <p class="small-text">THERE ARE SO MANY REASONS</p>
+
+            <h1>50 Reasons Why I Love You 💗</h1>
+
+            <p class="section-description">
+                Fifty little reasons, and still not enough
+                to explain how much you mean to me.
+            </p>
+
+            <div id="reasonsGrid" class="reasons-grid"></div>
+
+            <button class="main-button" onclick="showPage('photos')">
+                See Our Memories 📸
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- REASON POPUP -->
+    <div id="reasonPopup" class="popup">
+        <div class="popup-content">
+
+            <button class="close-button" onclick="closeReason()">
+                &times;
+            </button>
+
+            <div class="popup-heart">❤️</div>
+
+            <h2 id="reasonTitle">Reason Number 1</h2>
+
+            <p id="reasonContent"></p>
+
+            <button class="main-button" onclick="closeReason()">
+                Awww, Close 💕
+            </button>
+
+        </div>
+    </div>
+
+
+
+   <!-- PHOTO GALLERY SECTION -->
+   <section id="photos" class="page">
+       <div class="section-container">
+
+           <p class="small-text">OUR LITTLE WORLD</p>
+           <h1>Our Beautiful Memories 📸</h1>
+
+           <p class="section-description">
+               FAV PIC KO SATIN BOSS HEHE
+           </p>
+
+           <div class="photo-gallery">
+
+               <div class="photo-card">
+                   <img src="./photos/memory1.jpg" alt="Our memory one">
+                   <p>Memory One ❤️</p>
+               </div>
+
+               <div class="photo-card">
+                   <img src="./photos/memory2.jpg" alt="Our memory two">
+                   <p>Memory Two 💗</p>
+               </div>
+
+               <div class="photo-card">
+                   <img src="./photos/memory3.jpg" alt="Our memory three">
+                   <p>Memory Three 💕</p>
+               </div>
+
+               <div class="photo-card">
+                   <img src="./photos/memory4.jpg" alt="Our memory four">
+                   <p>Memory Four 🥰</p>
+               </div>
+
+               <div class="photo-card">
+                   <img src="./photos/memory5.jpg" alt="Our memory five">
+                   <p>Memory Five 💖</p>
+               </div>
+
+               <div class="photo-card">
+                   <img src="./photos/memory6.jpg" alt="Our memory six">
+                   <p>Memory Six 💘</p>
+               </div>
+
+           </div>
+
+           <p class="photo-note">
+               Replace these six photos with your own memories together.
+           </p>
+
+           <button class="main-button" onclick="goToFinalLetter()">
+               One Last Surprise 💌
+           </button>
+
+       </div>
+   </section>
+
+    <!-- JAVASCRIPT FILE -->
+    <script src="script.js"></script>
+
+</body>
+</html>
